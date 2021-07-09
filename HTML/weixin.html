@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>微信</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+        }
+
+        body{
+            background-color: #f0eff5;
+        }
+
+        .divTop{
+            position: fixed;
+            top:0px;
+            width: 100%;
+            height:10%;
+            background-color: black;
+        }
+
+        .divBottom{
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 10%;
+            /*background-color: black;*/
+        }
+
+        .divCenter{
+            position: absolute;
+            top:10%;
+            width: 100%;
+            height: 80%;
+            overflow: auto;
+        }
+
+        .divBottom a{
+            display: block;
+            width: 25%;
+            height: 100%;
+            float: left;
+            background-color: #f4f4f4;
+            border-top: black 1px solid;
+            text-decoration: none;
+        }
+        
+        .divBottom .item1{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: 31px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item2{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -84px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item3{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -198px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item4{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -315px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divTop .title{
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            line-height: 400%;
+        }
+
+        .divBottom a:nth-child(1){
+            background-position: 31px 12px;
+            color: #00cc00;
+        }
+
+        .divCenter .list .liInfo{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .divCenter .list .liInfo a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: black;
+        }
+
+        .divCenter .list .liInfo .divImg{
+            float: left;
+            width: 60px;
+            height: 60px;
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .list .liInfo .img1{
+            background-image: url("../img/dingyuehao.png");
+        }
+
+        .divCenter .list .liInfo .img2{
+            background-image: url("../img/mayun.png");
+        }
+
+        .divCenter .list .liInfo .img3{
+            background-image: url("../img/mahuateng.png");
+        }
+
+        .divCenter .list .liInfo .img4{
+            background-image: url("../img/leijun.jpg");
+        }
+
+        .divCenter .list .liInfo .img5{
+            background-image: url("../img/liyanhong.jpg");
+        }
+
+        .divCenter .list .liInfo .img6{
+            background-image: url("../img/liuqiangdong.jpg");
+        }
+        .divCenter .list .liInfo .divText{
+            float: left;
+        }
+
+        .divCenter .list .liInfo .divText .pName{
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        .divCenter .list .liInfo .divText .pWXNo{
+            margin-top: 10px;
+            margin-left: 10px;
+            color: #888;
+        }
+
+        .divCenter .list .liInfo .divRight{
+            float: right;
+            background-image: url("../img/99plus.png");
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="divTop">
+        <p class="title">微信</p>
+    </div>
+    <div class="divCenter">
+        <ul class="list">
+            <li class="liInfo">
+                <a href="dingyuehao.html">
+                    <div class="divImg img1"></div>
+                    <div class="divText">
+                        <p class="pName">订阅号</p>
+                        <p class="pWXNo">昭通学院：师生同台话“三风”以....</p>
+                    </div>
+                </a>
+            </li>
+            <li class="liInfo">
+                <a>
+                    <div class="divImg img2"></div>
+                    <div class="divText">
+                        <p class="pName">马云</p>
+                        <p class="pWXNo">马云：红细胞团队是最棒的</p>
+                    </div>
+                    <div class="divRight"></div>
+                </a>
+            </li>
+            <li class="liInfo">
+                <a>
+                    <div class="divImg img3"></div>
+                    <div class="divText">
+                        <p class="pName">马化腾</p>
+                        <p class="pWXNo">马化腾：充钱吗？充钱才能变得更强</p>
+                    </div>
+                    <div class="divRight"></div>
+                </a>
+            </li>
+            <li class="liInfo">
+                <a>
+                    <div class="divImg img4"></div>
+                    <div class="divText">
+                        <p class="pName">雷军</p>
+                        <p class="pWXNo">雷军：India fans.Are You OK</p>
+                    </div>
+                    <div class="divRight"></div>
+                </a>
+            </li>
+            <li class="liInfo">
+                <a>
+                    <div class="divImg img5"></div>
+                    <div class="divText">
+                        <p class="pName">李彦宏</p>
+                        <p class="pWXNo">李彦宏：厉害了百度AI！......</p>
+                    </div>
+                    <div class="divRight"></div>
+                </a>
+            </li>
+            <li class="liInfo">
+                <a href="liuqiangdongchat1.html">
+                    <div class="divImg img6"></div>
+                    <div class="divText">
+                        <p class="pName">刘强东</p>
+                        <p class="pWXNo">刘强东：红细胞团队，你们的京东快递到了</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="divBottom">
+        <a class="item1" href="weixin.html"><p>微信</p></a>
+        <a class="item2" href="tongxunlu.html"><p>通讯录</p></a>
+        <a class="item3" href="faxian.html"><p>发现</p></a>
+        <a class="item4" href="wo.html"><p>我</p></a>
+    </div>
+</body>
+</html>

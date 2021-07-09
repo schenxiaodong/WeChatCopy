@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,height=device-height">
+        <title>登录</title>
+        <style type="text/css">
+            a{
+                text-decoration: none;
+            }
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                font-size: 14px;
+                font-family: "微软雅黑";
+            }
+
+            .divbg{
+                width: 100%;
+                height:100%;
+                position: absolute;
+                background-image: url("../img/login_bg.jpg");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .divbg .divbtn{
+                width: 100%;
+                height: 120px;
+                position: fixed;
+                bottom:0px;
+            }
+
+            .divbg .divbtn a{
+                display: inline-block;
+                width:130px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 17px;
+                color: #eee;
+                font-weight: bold;
+                border-radius: 4px;
+            }
+
+            .divbg .divbtn .aleft{
+                background-color: #0c0;
+                position: fixed;
+                left: 15px;
+            }
+
+            .divbg .divbtn .aright{
+                background-color: lightgray;
+                position: fixed;
+                right: 15px;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+            window.onload = function(){
+                //1、获取到两个按钮
+                var btns = document.getElementsByClassName("btn")
+                //2、改变两个按钮距离底部的初始值
+                btns[0].style.bottom = "-50px";
+                btns[1].style.bottom = "-50px";
+                //3、使用js完成两个动画效果
+                var id =setInterval(func,10);//每隔10毫秒去执行所需要执行一次function函数
+
+                function func() {
+                    btns[0].style.bottom = parseInt(btns[0].style.bottom) + 5 + "px"
+                    if( parseInt(btns[0].style.bottom) >= 70){
+                        //停止定时器
+                        clearInterval(id);
+                        //开启一个新的定时器，加上第二个按钮
+                        id = setInterval(func2,10);
+
+                    }
+                }
+
+                function func2() {
+                    btns[1].style.bottom = parseInt(btns[1].style.bottom) + 5 + "px"
+                    if( parseInt(btns[1].style.bottom) >= 70){
+                        //停止定时器
+                        clearInterval(id);
+                    }
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="divbg">
+            <div class="divbtn">
+                <a class="aleft btn" href="login_input.html">登录</a>
+                <a class="aright btn" href="register.html">注册</a>
+            </div>
+
+        </div>
+    </body>
+</html>

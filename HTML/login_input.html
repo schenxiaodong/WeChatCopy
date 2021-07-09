@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!--适配手机端-->
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+        }
+        .divTop{
+            width: 100%;
+            height: 300px;
+            /*border: 1px solid red;*/
+            margin-top: 100px;
+            z-index: 999;
+        }
+
+        .divTop .divAccount{
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .divTop .divAccount .divLogo{
+            width: 80px;
+            height: 80px;
+            background-image: url("../img/logo.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .divTop .divAccount .pacc{
+            width: 90px;
+            margin: 10px auto 0px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .divTop .divPWD{
+            width: 85%;
+            height: 33px;
+            border-bottom: 1px solid #ebebeb;
+            margin: 0px auto;
+            margin-top: 20px;
+        }
+
+        .divTop .divPWD label{
+            font-size: 16px;
+        }
+        .divTop .divPWD input{
+            margin-left: 30px;
+            border:none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .divTop .divBtn{
+            width: 85%;
+            height: 50px;
+            border: 1px solid green;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 5px;
+            background-color: limegreen;
+        }
+        .divTop .divBtn a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .divTop .questions a{
+            margin-top: 10px;
+            display: block;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .divBottom{
+            height: 35px;
+            width: 100%;
+            position: fixed;
+            bottom: 1px;
+            text-align: center;
+        }
+
+        .divBottom a{
+            font-size: 16px;
+            color: #657489;
+        }
+
+        .divMask{
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            opacity: 0.2;
+            display: none;
+        }
+
+        .divMenu{
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            z-index: 10000;
+        }
+
+        .divMenu .list li{
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            border: solid 1px gainsboro;
+        }
+
+        .divMenu .list li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .divMenu .list .cancer{
+            margin-top:10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function(){
+            //获取到遮罩层div
+            var divMask = document.getElementsByClassName("divMask")[0];
+            //隐藏遮罩层
+            divMask.style.display = "none";
+            //获取到菜单div
+            var divMenu = document.getElementsByClassName("divMenu")[0];
+            //将divMenu移动到最底部隐藏起来
+            divMenu.style.bottom = "-210px";
+            divMenu.style.display = "none";
+
+            //获取到“更多”按钮
+            var  moreBTN = document.getElementById("moreBTN");
+
+            //为“更多”按钮绑定点击事件
+
+            moreBTN.onclick = function(){
+                //显示出遮罩层
+                divMask.style.display = "block";
+                divMenu.style.display = "block";
+                //以动画的形式缓慢加载出菜单div
+                var id = setInterval(func,10);
+                function func() {
+                    divMenu.style.bottom = parseInt(divMenu.style.bottom) + 5 + "px"
+                    if( parseInt(divMenu.style.bottom) >= 0){
+                        //停止定时器
+                        clearInterval(id);
+
+                    }
+                }
+            }
+            //获取到遮罩层和取消按钮
+            var cclick = document.getElementsByClassName("cclick");
+            //为遮罩层和取消按钮绑定点击事件
+            for(var i = 0;i < cclick.length;i++){
+                cclick[i].onclick = function(){
+                    //隐藏遮罩层
+                    var id = setInterval(fun2,10);
+                    //动画退出菜单div
+                    function fun2(){
+                        divMenu.style.bottom = parseInt(divMenu.style.bottom)-10 + "px";
+                        if(parseInt(divMenu.style.bottom)<=-210){
+                            clearInterval(id);
+                            //隐藏菜单div
+                            divMenu.style.display = "none";
+                            divMask.style.display = "none"
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="divMask cclick"></div>
+    <div class="divMenu">
+        <ul class="list">
+            <li><a>切换账号...</a></li>
+            <li><a>注册</a></li>
+            <li><a>前往微信安全中心</a></li>
+            <li class="cancer"><a class="cclick">取消</a></li>
+        </ul>
+
+    </div>
+    <div class="divTop">
+        <div class="divAccount">
+            <div class="divLogo"></div>
+            <p class="pacc">123456789</p>
+        </div>
+        <div class="divPWD">
+            <label for="pwd">密码</label>
+            <input id="pwd" type="password" placeholder="请输入密码">
+
+        </div>
+        <div class="divBtn">
+            <a href="tongxunlu.html">登录</a>
+        </div>
+        <div class="questions">
+            <a href="#">登录遇到问题？</a>
+        </div>
+    </div>
+    <div class="divBottom">
+        <a id="moreBTN">更多</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>我</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+        }
+
+        body{
+            background-color: #f0eff5;
+        }
+
+        a{
+            color: black;
+        }
+
+        .divTop{
+            position: fixed;
+            top:0px;
+            width: 100%;
+            height:10%;
+            background-color: black;
+        }
+
+        .divBottom{
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 10%;
+            /*background-color: black;*/
+        }
+
+        .divCenter{
+            position: absolute;
+            top:10%;
+            width: 100%;
+            height: 80%;
+            overflow: auto;
+        }
+
+        .divBottom a{
+            display: block;
+            width: 25%;
+            height: 100%;
+            float: left;
+            background-color: #f4f4f4;
+            border-top: black 1px solid;
+            text-decoration: none;
+        }
+        
+        .divBottom .item1{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: 31px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item2{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -84px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item3{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -198px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item4{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -315px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divTop .title{
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            line-height: 400%;
+        }
+
+        .divBottom a:nth-child(4){
+            background-position: -315px 12px;
+            color: #00cc00;
+        }
+
+        .divCenter .list .liInfo{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+        }
+
+        .divCenter .list .liInfo a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .divCenter .list .liInfo .divImg{
+            float: left;
+            width: 60px;
+            height: 60px;
+            background-image: url("../img/logo.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .list .liInfo .divText{
+            float: left;
+        }
+
+        .divCenter .list .liInfo .divText .pName{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .list .liInfo .divText .pWXNo{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .list .liInfo .divLink{
+            float: right;
+            margin-top: 28px;
+            margin-right: 10px;
+        }
+
+        .divCenter .list .liInfo .divLink .erweima{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-image: url("../img/erweima.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 10px;
+        }
+
+        .divCenter .list .liInfo .divLink .pLink{
+            float: left;
+            color: #a6a6a6;
+        }
+
+        .divCenter .list .liItem{
+            width: 100%;
+            height: 45px;
+            border-bottom:1px solid #f4f4f4;
+            background-color: white;
+        }
+
+        .divCenter .list .liItem a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .divCenter .list .liItem a .divImg{
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: left;
+            margin-top: 3px;
+            margin-left: 10px;
+        }
+
+        .divCenter .list .liItem a .img1{
+            background-image: url("../img/xiangce.png");
+        }
+        .divCenter .list .liItem a .img2{
+            background-image: url("../img/shoucang.png");
+        }
+        .divCenter .list .liItem a .img3{
+            background-image: url("../img/qianbao.png");
+        }
+        .divCenter .list .liItem a .img4{
+            background-image: url("../img/kaquan.png");
+        }
+        .divCenter .list .liItem a .img5{
+            background-image: url("../img/biaoqing.png");
+        }
+        .divCenter .list .liItem a .img6{
+            background-image: url("../img/shezhi.png");
+        }
+        .divCenter .list .liItem a .pTitle{
+            float: left;
+            margin-top: 12px;
+            margin-left: 10px;
+        }
+
+        .divCenter .list .liItem a .pLink{
+            float: right;
+            margin-top: 12px;
+            margin-right: 10px;
+            color: #a6a6a6;
+        }
+
+        .divCenter .list .liMove{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="divTop">
+        <p class="title">我</p>
+    </div>
+    <div class="divCenter">
+        <ul class="list">
+            <li class="liInfo liMove">
+                <a href="gerenxinxi.html">
+                    <div class="divImg"></div>
+                    <div class="divText">
+                        <p class="pName">红细胞团队</p>
+                        <p class="pWXNo">微信号：123456789</p>
+                    </div>
+                    <div class="divLink">
+                        <div class="erweima"></div>
+                        <p class="pLink">></p>
+                    </div>
+                </a>
+            </li>
+            <li class="liItem liMove">
+                <a>
+                    <div class="divImg img1"></div>
+                    <p class="pTitle">相册</p>
+                    <p class="pLink">></p>
+                </a>
+            </li>
+            <li class="liItem">
+                <a>
+                    <div class="divImg img2"></div>
+                    <p class="pTitle">收藏</p>
+                    <p class="pLink">></p>
+                </a>
+            </li>
+            <li class="liItem">
+                <a>
+                    <div class="divImg img3"></div>
+                    <p class="pTitle">钱包</p>
+                    <p class="pLink">></p>
+                </a>
+            </li>
+            <li class="liItem">
+                <a>
+                    <div class="divImg img4"></div>
+                    <p class="pTitle">卡包</p>
+                    <p class="pLink">></p>
+                </a>
+            </li>
+            <li class="liItem liMove">
+                <a>
+                    <div class="divImg img5"></div>
+                    <p class="pTitle">表情</p>
+                    <p class="pLink">></p>
+                </a>
+            </li>
+            <li class="liItem liMove">
+                <a href="shezhi.html">
+                    <div class="divImg img6"></div>
+                    <p class="pTitle">设置</p>
+                    <p class="pLink">></p>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="divBottom">
+        <a class="item1" href="weixin.html"><p>微信</p></a>
+        <a class="item2" href="tongxunlu.html"><p>通讯录</p></a>
+        <a class="item3" href="faxian.html"><p>发现</p></a>
+        <a class="item4" href="wo.html"><p>我</p></a>
+    </div>
+</body>
+</html>

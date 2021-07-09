@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+        }
+
+        .topBar{
+            height: 40px;
+            background-color: #393a3f;
+            color: #ccc;
+        }
+
+        .topBar .leftImg{
+            display: inline-block;
+            background-image: url("../img/leftArr.png");
+            width: 14px;
+            height: 14px;
+            background-size: 14px;
+            margin-top: 14px;
+            margin-left: 7px;
+        }
+
+        .topBar .divText{
+            display: inline-block;
+            font-size: 14px;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .divTop{
+            width: 92%;
+            margin: 0px auto;
+        }
+
+        .divTop .nameBox .divLeft{
+            width: 290px;
+            position: relative;
+            bottom: -30px;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .divTop .nameBox .divLeft label{
+            position: relative;
+            bottom: 10px;
+        }
+
+        .divTop .nameBox .divLeft input{
+            position: relative;
+            bottom: 10px;
+            left: 15px;
+        }
+
+        .divTop .nameBox .divLeft:hover{
+            border-bottom: 1px solid green;
+        }
+
+
+        .divTop .nameBox .divLeft input{
+            margin-left: 20px;
+            border: none;
+            outline: none;
+        }
+        .divTop .nameBox .divRight{
+            display: inline-table;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 4%;
+            top:40px;
+            background-image: url("../img/camera.png");
+            background-size: contain;
+        }
+
+        .countryBox{
+             width: 100%;
+             height: 30px;
+             margin-top: 40px;
+             border-bottom: 1px solid #ebebeb;
+         }
+
+        .countryBox a{
+            position: absolute;
+            right: 4%;
+            text-decoration: none;
+            color: green;
+        }
+
+        .divTop .phoneNum {
+            width: 100%;
+            margin-top:10px;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .divTop .phoneNum:hover{
+            border-bottom: 1px solid green;
+        }
+
+        .divTop .phoneNum input{
+            margin-left: 20px;
+            margin-bottom: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .divTop .divPasswd {
+            width: 100%;
+            margin-top:10px;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .divTop .divPasswd:hover{
+            border-bottom: 1px solid green;
+        }
+
+        .divTop .divPasswd input{
+            margin-left: 34px;
+            margin-bottom: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .divTop .aBTN {
+            width: 100%;
+            height: 30px;
+            margin-top:10px;
+            background-color: #1aac19;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topBar">
+        <a class="leftImg" href="index.html"></a>
+        <div class="divText">填写手机号</div>
+    </div>
+    <div class="divTop">
+        <div class="nameBox">
+            <div class="divLeft">
+                <label for="name">昵称</label>
+                <input id="name" type="text" placeholder="例如：陈晨">
+            </div>
+            <div class="divRight"></div>
+        </div>
+        <div class="countryBox">
+            <label for="countryName">国家/地区</label>
+            <a id="countryName" href="#">中国（+86）</a>
+        </div>
+        <div class="phoneNum">
+            <label>手机号</label>
+            <input type="number" placeholder="请填写手机号">
+        </div>
+        <div class="divPasswd">
+            <label>密码</label>
+            <input type="password" placeholder="填写密码">
+        </div>
+        <div class="aBTN">
+            <a>注册</a>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>

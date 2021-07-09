@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>公众号</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            list-style: none;
+
+        }
+
+
+        .divTop{
+            position: fixed;
+            top:0px;
+            width: 100%;
+            height:10%;
+            background-color: black;
+            display: inline-block;
+        }
+
+        a{
+            color: #000;
+        }
+
+        .divTop .leftImg{
+            background-image: url("../img/leftArr.png");
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: left;
+            margin-top: 18px;
+            margin-left: 10px;
+        }
+        
+        .divTop .title{
+            float: left;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-left: 15px;
+            border-left: #333 solid 1px;
+            padding-left: 15px;
+        }
+
+        .divTop .searchImg{
+            background-image: url("../img/search.png");
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: right;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .divTop .plus{
+            float: right;
+            color: white;
+            font-size: 40px;
+            margin-top: 3px;
+            margin-right: 15px;
+            padding-left: 10px;
+        }
+
+        .divCenter{
+            position: absolute;
+            top:10%;
+            width: 100%;
+            height: 80%;
+            overflow: auto;
+        }
+
+        .divBottom a{
+            display: block;
+            width: 25%;
+            height: 100%;
+            float: left;
+            background-color: #f4f4f4;
+            border-top: black 1px solid;
+            text-decoration: none;
+        }
+
+
+
+        .divBottom a:nth-child(2){
+            background-position: -315px 12px;
+            color: #00cc00;
+        }
+
+        .divCenter .divDH .list li{
+            width: 100%;
+            height: 60px;
+            border: 1px solid #ebebeb;
+        }
+
+        .divCenter .divdh .list li a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .divCenter .divDH .list li a .divImg {
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin-top:10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .divDH .list li a .divText{
+            margin-top: 18px;
+            margin-left: 15px;
+        }
+
+        .divCenter .divDH .list li a div{
+            float: left;
+        }
+
+        .divCenter .divHMC .divClear{
+            width: 100%;
+            background-color: #ebebeb;
+            padding-left: 10px;
+        }
+
+        .divCenter .divHMC .list li{
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .divCenter .divHMC .list a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        .divCenter .divHMC .list .divImg{
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin-top:10px;
+            margin-left: 10px;
+            background-image: url("../img/touxiang.png");
+        }
+
+
+        .divCenter .divHMC .list .img1{
+            background-image: url("../img/ztxy.jpg");
+        }
+
+        .divCenter .divHMC .list .divText{
+            margin-top: 18px;
+            margin-left: 15px;
+        }
+
+        .divCenter .divHMC .list div{
+            float: left;
+        }
+
+        .divCenter .divHMCBQ{
+            position: fixed;
+            right: 10px;
+            top: 80px;
+
+        }
+        .divCenter .divHMCBQ .list li a{
+            font-family: "Times New Roman";
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="divTop">
+    <a class="leftImg" href="tongxunlu.html"></a>
+    <p class="title">公众号</p>
+    <div class="plus">+</div>
+    <div class="searchImg"></div>
+
+</div>
+<div class="divCenter">
+    <div class="divHMC">
+        <div class="divClear">
+            <a>C</a>
+        </div>
+        <ul class="list">
+            <li>
+                <a>
+                    <div class="divImg" ></div>
+                    <div class="divText">阿狸</div>
+                </a>
+            </li>
+        </ul>
+        <div class="divClear">
+            <a>Z</a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="ztxy.html">
+                    <div class="divImg img1"></div>
+                    <div class="divText">昭通学院</div>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="divHMCBQ">
+        <ul class="list">
+            <li><a href="#A">↑</a></li>
+            <li><a href="#A">☆</a></li>
+            <li><a href="#A">A</a></li>
+            <li><a href="#B">B</a></li>
+            <li><a href="#C">C</a></li>
+            <li><a href="#D">D</a></li>
+            <li><a href="#E">E</a></li>
+            <li><a href="#F">F</a></li>
+            <li><a href="#G">G</a></li>
+            <li><a href="#H">H</a></li>
+            <li><a href="#I">I</a></li>
+            <li><a>J</a></li>
+            <li><a>K</a></li>
+            <li><a>L</a></li>
+            <li><a>M</a></li>
+            <li><a>N</a></li>
+            <li><a>O</a></li>
+            <li><a>P</a></li>
+            <li><a>Q</a></li>
+            <li><a>R</a></li>
+            <li><a>S</a></li>
+            <li><a>T</a></li>
+            <li><a>U</a></li>
+            <li><a>V</a></li>
+            <li><a>W</a></li>
+            <li><a>X</a></li>
+            <li><a>Y</a></li>
+            <li><a>Z</a></li>
+            <li><a>#</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

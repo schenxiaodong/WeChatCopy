@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+</head>
+
+<style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: "微软雅黑";
+        list-style: none;
+
+    }
+
+    a{
+        color: #000;
+    }
+
+    .divTop{
+        position: fixed;
+        top:0px;
+        width: 100%;
+        height:10%;
+        background-color: black;
+        display: inline-block;
+    }
+
+    .divTop .leftImg{
+        background-image: url("../img/leftArr.png");
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin-top: 18px;
+        margin-left: 10px;
+    }
+
+    .divTop .title{
+        float: left;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 18px;
+        margin-left: 15px;
+        border-left: #333 solid 1px;
+        padding-left: 15px;
+    }
+
+    .divCenter{
+        position: absolute;
+        top:10%;
+        width: 100%;
+        height: 90%;
+        left: 10px;
+        right: 10px;
+    }
+
+
+
+
+    .divCenter .nameBox .divLeft{
+        width: 290px;
+        position: relative;
+        bottom: -30px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .divCenter .nameBox .divLeft label{
+        position: relative;
+        bottom: 10px;
+    }
+
+    .divCenter .nameBox .divLeft input{
+        position: relative;
+        bottom: 10px;
+        left: 15px;
+    }
+
+    .divCenter .nameBox .divLeft:hover{
+        border-bottom: 1px solid green;
+    }
+
+
+    .divCenter .nameBox .divLeft input{
+        margin-left: 20px;
+        border: none;
+        outline: none;
+    }
+
+
+    .divCenter .nameBox .divRight{
+        display: inline-table;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 5%;
+        top:0px;
+        background-image: url("../img/camera.png");
+        background-size: contain;
+    }
+
+    .divCenter .countryBox{
+        width: 100%;
+        height: 30px;
+        margin-top: 40px;
+        border-bottom: 1px solid #ebebeb;
+
+    }
+
+    .countryBox a{
+        position: absolute;
+        right: 4%;
+        text-decoration: none;
+        color: green;
+    }
+
+    .divCenter .phoneNum {
+        width: 100%;
+        margin-top:10px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .divCenter .phoneNum:hover{
+        border-bottom: 1px solid green;
+    }
+
+    .divCenter .phoneNum input{
+        margin-left: 20px;
+        margin-bottom: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .divCenter .divPasswd {
+        width: 100%;
+        margin-top:10px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .divCenter .divPasswd:hover{
+        border-bottom: 1px solid green;
+    }
+
+    .divCenter .divPasswd input{
+        margin-left: 34px;
+        margin-bottom: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .divCenter .aBTN {
+        width: 100%;
+        height: 30px;
+        margin-top:10px;
+        background-color: #1aac19;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .divCenter .aBTN a{
+        color: white;
+    }
+
+</style>
+
+<body>
+    <div class="divTop">
+        <a class="leftImg" href="login.html"></a>
+        <p class="title">注册</p>
+    </div>
+    <div class="divCenter">
+        <div class="nameBox">
+            <div class="divLeft">
+                <label for="name">昵称</label>
+                <input id="name" type="text" placeholder="例如：陈晨">
+            </div>
+            <div class="divRight"></div>
+        </div>
+        <div class="countryBox">
+            <label for="countryName">国家/地区</label>
+            <a id="countryName" href="#">中国（+86）</a>
+        </div>
+        <div class="phoneNum">
+            <label>手机号</label>
+            <input type="number" placeholder="请填写手机号">
+        </div>
+        <div class="divPasswd">
+            <label>密码</label>
+            <input type="password" placeholder="填写密码">
+        </div>
+        <div class="aBTN">
+            <a>注册</a>
+        </div>
+    </div>
+</body>
+</html>

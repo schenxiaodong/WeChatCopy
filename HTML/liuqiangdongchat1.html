@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>Chatting</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            list-style: none;
+
+        }
+
+        body{
+            background-color: #ebebeb;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+
+        .divTop{
+            position: fixed;
+            top:0px;
+            width: 100%;
+            height:10%;
+            background-color: black;
+            display: inline-block;
+        }
+
+        .divTop .leftImg{
+            background-image: url("../img/leftArr.png");
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: left;
+            margin-top: 18px;
+            margin-left: 10px;
+        }
+
+        .divTop .title{
+            float: left;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-left: 15px;
+            border-left: #333 solid 1px;
+            padding-left: 15px;
+        }
+
+        .divTop .searchImg{
+            background-image: url("../img/head.png");
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: right;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .divCenter{
+            position: absolute;
+            top:10%;
+            width: 100%;
+            height: 82%;
+            overflow: auto;
+        }
+
+        .divCenter a{
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .divBottom{
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 8%;
+        }
+
+        .divBottom .bottomBox{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            float: left;
+            background-color: #f4f4f4;
+            border-top: black 1px solid;
+            text-decoration: none;
+        }
+
+        .divBottom .voice{
+            float: left;
+            width: 40px;
+            height: 40px;
+            background-image: url("../img/voice.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 10px;
+            margin-top: 6px;
+        }
+
+        .divBottom input{
+            width: 200px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 19px;
+            outline: none;
+            background-color: #f4f4f4;
+            border-bottom: #cbcbcb 1px solid;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .divBottom input:hover{
+            border-bottom: #00cc00 1px solid;
+        }
+
+        .divBottom .plus{
+            float: right;
+            width: 40px;
+            height: 40px;
+            background-image: url("../img/plus.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 10px;
+            margin-top: 6px;
+        }
+
+        .divBottom .small{
+            float: right;
+            width: 40px;
+            height: 40px;
+            background-image: url("../img/small.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 10px;
+            margin-top: 6px;
+        }
+
+        .divCenter{
+            margin-top: 10px;
+            margin-left: 10px;
+            position: absolute;
+            top:10%;
+            width: 100%;
+            height: 82%;
+            overflow: auto;
+        }
+
+        .divCenter .me{
+            width: 100%;
+            display: inline-block;
+        }
+
+        .divCenter .me a .liuqiangdonglogo{
+            float: left;
+            width: 35px;
+            height: 35px;
+            background-image: url("../img/liuqiangdong.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .divCenter .me .message{
+            margin-left: 10px;
+            float: left;
+            width: 200px;
+            background-color: white;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="divTop">
+    <a class="leftImg" href="weixin.html"></a>
+    <p class="title">刘强东</p>
+    <a href="liuqiangdongtemp1.html">
+        <div class="searchImg"></div>
+    </a>
+</div>
+<div class="divCenter">
+    <div class="me">
+        <a href="liuqiangdong1.html">
+            <div class="liuqiangdonglogo"></div>
+        </a>
+            <div class="message">红细胞团队，你们的京东快递到了</div>
+    </div>
+</div>
+
+<div class="divBottom">
+    <div class="bottomBox">
+        <div class="voice"></div>
+        <input name="text" type="text">
+        <div class="plus"></div>
+        <div class="small"></div>
+
+    </div>
+</div>
+</body>
+</html>

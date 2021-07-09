@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>通讯录</title>
+    <style type="text/css">
+        a {
+            text-decoration: none;
+        }
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: "微软雅黑";
+            font-size: 14px;
+        }
+
+        .divTop{
+            position: fixed;
+            top:0px;
+            width: 100%;
+            height:10%;
+            background-color: black;
+            display: inline-block;
+        }
+
+        .divTop .leftImg{
+            background-image: url("../img/leftArr.png");
+            width: 25px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            float: left;
+            margin-top: 18px;
+            margin-left: 10px;
+        }
+
+        .divTop .title{
+            float: left;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-left: 15px;
+            border-left: #333 solid 1px;
+            padding-left: 15px;
+        }
+
+        body{
+            background-color: #f0eff5;
+
+        }
+
+        .divcenter .list{
+            position: absolute;
+            top: 10%;
+            width: 100%;
+        }
+
+        .divcenter .list .liinfo{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+        }
+        .divcenter .list .liinfo a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        .divcenter .list .liinfo .divimg{
+            width: 60px;
+            height: 60px;
+            background-image: url("../img/logo.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .divcenter .list .liinfo .divtxt{
+            margin: 0px auto;
+            float: left;
+            margin-left: 10px;
+            margin-top: 30px;
+
+
+        }
+
+        .divcenter .list .liitem{
+            width: 100%;
+            height: 45px;
+            border-bottom: 1px solid #f4f4f4;
+            background-color: white;
+        }
+        .divcenter .list .liitem a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        .divcenter .list .liitem .divimg{
+            width: 40px;
+            height: 40px;
+            background-image: url("../img/logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            float: right;
+            margin-top: 3px;
+            margin-right: 10px;
+
+        }
+        .divcenter .list .liitem .ptitle{
+            float: left;
+            margin-top: 12px;
+            margin-left: 10px;
+        }
+        .divcenter .list .liitem .ptitleone{
+            float: right;
+            margin-top: 12px;
+            margin-right: 10px;
+            color: #a6a6a6;
+        }
+
+        .divcenter .list .limove{
+            margin-top: 20px;
+        }
+        .divcenter .list .liitem .imgimg{
+            width: 25px;
+            height: 25px;
+            background-image: url("../img/erweima.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            float: right;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="divTop">
+        <a class="leftImg" href="wo.html"></a>
+        <p class="title">新的朋友</p>
+    </div>
+    <div class="divcenter">
+            <ul class="list">
+                <li class="liinfo limove">
+                    <a>
+                        <div class="divtxt">头像</div>
+                        <div class="divimg"></div>
+
+                    </a>
+                </li>
+                <li class="liitem">
+                    <a>
+                        <p class="ptitle">昵称</p>
+                        <p class="ptitleone">红细胞团队</p>
+                    </a>
+                </li>
+
+                <li class="liitem">
+                    <a>
+                        <p class="ptitle">微信号</p>
+                        <p class="ptitleone">123456789</p>
+                    </a>
+                </li>
+
+                <li class="liitem">
+                    <a>
+                        <p class="ptitle">二维码名片</p>
+                        <div class="imgimg"></div>
+                    </a>
+                </li>
+
+                <li class="liitem">
+                    <a>
+                        <p class="ptitle">更多</p>
+                    </a>
+                </li>
+
+                <li class="liitem limove">
+                    <a>
+                        <p class="ptitle">我的地址</p>
+                    </a>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

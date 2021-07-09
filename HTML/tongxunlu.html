@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>通讯录</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            list-style: none;
+
+        }
+
+        a{
+            color: black;
+        }
+        .divTop{
+            position: fixed;
+            top:0px;
+            width: 100%;
+            height:10%;
+            background-color: black;
+        }
+
+        .divBottom{
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 10%;
+            /*background-color: black;*/
+        }
+
+        .divCenter{
+            position: absolute;
+            top:10%;
+            width: 100%;
+            height: 80%;
+            overflow: auto;
+        }
+
+        .divBottom a{
+            display: block;
+            width: 25%;
+            height: 100%;
+            float: left;
+            background-color: #f4f4f4;
+            border-top: black 1px solid;
+            text-decoration: none;
+        }
+        
+        .divBottom .item1{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: 31px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item2{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -84px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item3{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -198px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divBottom .item4{
+            background-image: url("../img/nav_bg.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            background-position: -315px -44px;
+            text-align: center;
+            padding-top: 40px;
+            color: #999;
+        }
+
+        .divTop .title{
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            line-height: 400%;
+        }
+
+        .divBottom a:nth-child(2){
+            background-position: -315px 12px;
+            color: #00cc00;
+        }
+
+        .divCenter .divDH .list li{
+            width: 100%;
+            height: 60px;
+            border: 1px solid #ebebeb;
+        }
+
+        .divCenter .divdh .list li a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .divCenter .divDH .list li a .divImg {
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin-top:10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .divDH .list li a .divText{
+            margin-top: 18px;
+            margin-left: 15px;
+        }
+
+        .divCenter .divDH .list li a div{
+            float: left;
+        }
+        .divCenter .divDH .list li a .img1{
+            background-image: url("../img/newFriend.png");
+        }
+        .divCenter .divDH .list li a .img2{
+            background-image: url("../img/qunliao.png");
+        }
+        .divCenter .divDH .list li a .img3{
+            background-image: url("../img/biaoqian.png");
+        }
+        .divCenter .divDH .list li a .img4{
+            background-image: url("../img/gongzhonghao.png");
+        }
+
+        .divCenter .divHMC .divClear{
+            width: 100%;
+            background-color: #ebebeb;
+            padding-left: 10px;
+        }
+
+        .divCenter .divHMC .list li{
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .divCenter .divHMC .list a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        .divCenter .divHMC .list .divImg{
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 5px;
+            margin-top:10px;
+            margin-left: 10px;
+        }
+
+        .divCenter .divHMC .list .img1{
+            background-image: url("../img/touxiang.png");
+        }
+        .divCenter .divHMC .list .img2{
+            background-image: url("../img/leijun.jpg");
+        }
+        .divCenter .divHMC .list .img3{
+            background-image: url("../img/liyanhong.jpg");
+        }
+        .divCenter .divHMC .list .img4{
+            background-image: url("../img/liuqiangdong.jpg");
+        }
+        .divCenter .divHMC .list .img5{
+            background-image: url("../img/mahuateng.png");
+        }
+        .divCenter .divHMC .list .img6{
+            background-image: url("../img/mayun.png");
+        }
+        .divCenter .divHMC .list .divText{
+            margin-top: 18px;
+            margin-left: 15px;
+        }
+
+        .divCenter .divHMC .list div{
+            float: left;
+        }
+
+        .divCenter .divHMCBQ{
+            position: fixed;
+            right: 10px;
+            top: 65px;
+
+        }
+        .divCenter .divHMCBQ .list li a{
+            font-family: "Times New Roman";
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="divTop">
+        <p class="title">通讯录</p>
+    </div>
+    <div class="divCenter">
+        <div class="divDH">
+            <div class="list">
+                <li>
+                    <a href="xindepengyou.html">
+                        <div class="divImg img1"></div>
+                        <div class="divText">新的朋友</div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="divImg img2"></div>
+                        <div class="divText">群聊</div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="divImg img3"></div>
+                        <div class="divText">标签</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="gongzonghao.html">
+                        <div class="divImg img4"></div>
+                        <div class="divText" >公众号</div>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <div class="divHMC">
+            <div class="divClear">
+                <a>A</a>
+            </div>
+            <ul class="list">
+                <li>
+                    <a>
+                        <div class="divImg img1"></div>
+                        <div class="divText">阿狸</div>
+
+                    </a>
+                </li>
+            </ul>
+            <div class="divClear">
+                <a>L</a>
+            </div>
+            <ul class="list">
+                <li>
+                    <a>
+                        <div class="divImg img2" ></div>
+                        <div class="divText">雷军</div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="divImg img3" ></div>
+                        <div class="divText">李彦宏</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="liuqiangdong.html">
+                        <div class="divImg img4" ></div>
+                        <div class="divText">刘强东</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="divClear">
+                <a name="#M">M</a>
+            </div>
+            <ul class="list">
+                <li>
+                    <a>
+                        <div class="divImg img5" ></div>
+                        <div class="divText">马化腾</div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="divImg img6" ></div>
+                        <div class="divText">马云</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="divHMCBQ">
+            <ul class="list">
+                <li><a href="#↑">↑</a></li>
+                <li><a href="#☆">☆</a></li>
+                <li><a href="#A">A</a></li>
+                <li><a href="#B">B</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#D">D</a></li>
+                <li><a href="#E">E</a></li>
+                <li><a href="#F">F</a></li>
+                <li><a href="#G">G</a></li>
+                <li><a href="#H">H</a></li>
+                <li><a href="#I">I</a></li>
+                <li><a href="#J">J</a></li>
+                <li><a href="#K">K</a></li>
+                <li><a href="#L">L</a></li>
+                <li><a href="#M">M</a></li>
+                <li><a href="#N">N</a></li>
+                <li><a href="#O">O</a></li>
+                <li><a href="#P">P</a></li>
+                <li><a href="#Q">Q</a></li>
+                <li><a href="#R">R</a></li>
+                <li><a href="#S">S</a></li>
+                <li><a href="#T">T</a></li>
+                <li><a href="#U">U</a></li>
+                <li><a href="#V">V</a></li>
+                <li><a href="#W">W</a></li>
+                <li><a href="#X">X</a></li>
+                <li><a href="#Y">Y</a></li>
+                <li><a href="#Z">Z</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="divBottom">
+        <a class="item1" href="weixin.html"><p>微信</p></a>
+        <a class="item2" href="tongxunlu.html"><p>通讯录</p></a>
+        <a class="item3" href="faxian.html"><p>发现</p></a>
+        <a class="item4" href="wo.html"><p>我</p></a>
+    </div>
+</body>
+</html>
